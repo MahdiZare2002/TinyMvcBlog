@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\controllers;
+namespace Application\Controllers;
 
 use System\Traits\Redirect;
 

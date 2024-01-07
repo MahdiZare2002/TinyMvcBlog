@@ -17,9 +17,9 @@ class Routing
     public function run()
     {
 
-        $path = realpath(dirname(__FILE__), '/../../application/controller', $this->current_route[0] . '.php');
+        $path = realpath(dirname(__FILE__) . '/../../application/controllers/' . $this->current_route[0] . '.php');
         if (!file_exists($path)) {
-            echo 'Error 404 (this page is not found)';
+            echo '404 - not found';
             exit;
         }
 
@@ -27,7 +27,7 @@ class Routing
 
         sizeof($this->current_route) == 1 ? $method = "index" : $method = $this->current_route[1];
 
-        $class = "Application\controllers\\" . $this->current_route[0];
+        $class = "Application\Controllers\\" . $this->current_route[0];
         $object = new $class;
 
         if (method_exists($object, $method)) {
