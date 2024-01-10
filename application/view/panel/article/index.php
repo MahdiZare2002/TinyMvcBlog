@@ -1,3 +1,5 @@
+<?php $this->include("panel.layouts.header"); ?>
+
 <section class="container-fluid">
     <section class="row">
         <section class="col-md-2 p-0">
@@ -56,3 +58,5 @@
                     </tbody>
                 </table>
             </section>
+
+            <?php $this->include("panel.layouts.footer"); ?>

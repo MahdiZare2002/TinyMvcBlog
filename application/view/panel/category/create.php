@@ -1,3 +1,5 @@
+<?php $this->include("panel.layouts.header"); ?>
+
 <section class="container-fluid">
     <section class="row">
         <section class="col-md-2 p-0">
@@ -27,3 +29,4 @@
                 </section>
                 <button type="submit" class="btn btn-primary">Create</button>
             </form>
+            <?php $this->include("panel.layouts.footer"); ?>

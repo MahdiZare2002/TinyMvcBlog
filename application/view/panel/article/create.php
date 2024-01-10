@@ -1,3 +1,5 @@
+<?php $this->include("panel.layouts.header"); ?>
+
 <section class="container-fluid">
     <section class="row">
         <section class="col-md-2 p-0">
@@ -32,5 +34,7 @@
                     <label for="body">Body</label>
                     <textarea class="form-control" id="body" rows="5" placeholder="body ..."></textarea>
                 </section>
-                <button type="submit" class="btn btn-primary">Update</button>
+                <button type="submit" class="btn btn-primary">Create</button>
             </form>
+
+<?php $this->include("panel.layouts.footer"); ?>

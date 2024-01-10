@@ -1,5 +1,12 @@
+<?php $this->include("app.layouts.header"); ?>
+
 <section class="container my-5">
-    <!-- Example row of columns -->
+    <section class="row">
+        <section class="col-12">
+            <h1>Lorem ipsum dolor</h1>
+            <hr>
+        </section>
+    </section>
     <section class="row">
         <section class="col-md-4">
             <h2>Heading</h2>
@@ -45,3 +52,5 @@
         </section>
     </section>
 </section>
+
+<?php $this->include("app.layouts.footer"); ?>
