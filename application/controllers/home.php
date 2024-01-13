@@ -6,12 +6,16 @@ class Home extends Controller
 {
     public function index()
     {
-        echo 'hi mf';
-        $this->view('app.index');
+        
     }
 
-    public function create()
+    public function category($id)
     {
-        echo 'create file';
+        
+    }
+
+    public function show($id)
+    {
+        
     }
 }
