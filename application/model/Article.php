@@ -22,7 +22,7 @@ class Article extends Model
 
     public function insert($values)
     {
-        $query = "INSERT INTO `articles` (`title` , `cat_id` , `body` , `created_at`) VALUES (?, ?, ?, now()";
+        $query = "INSERT INTO `articles` (`title` , `cat_id` , `body` , `created_at`) VALUES (?, ?, ?, now())";
         $this->execute($query, array_values($values));
         $this->closeConnection();
     }

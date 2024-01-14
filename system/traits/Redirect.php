@@ -7,7 +7,7 @@ trait Redirect
     protected function redirect($url)
     {
         $protocol = stripos($_SERVER['SERVER_PROTOCOL'], 'https') === true ? 'https://' : 'http://';
-        header('Location: ' . $protocol . $_SERVER['HTTP_HOST'] . '/MvcBlog/' . $url);
+        header('Location: ' . $protocol . $_SERVER['HTTP_HOST'] . '/mvcblog/' . $url);
         exit;
     }
 
@@ -20,5 +20,11 @@ trait Redirect
         } else {
             echo 'route not found';
         }
+    }
+
+    protected function dd($dir)
+    {
+        var_dump($dir);
+        exit;
     }
 }

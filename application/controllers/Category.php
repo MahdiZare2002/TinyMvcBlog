@@ -6,7 +6,6 @@ use Application\Model\Category as CategoryModel;
 
 class Category extends Controller
 {
-
     public function index()
     {
         $category = new CategoryModel();
@@ -26,15 +25,21 @@ class Category extends Controller
         return $this->redirect('category');
     }
 
+    public function show($id)
+    {
+        return $this->view('panel.category.show');
+    }
+
     public function edit($id)
     {
-        $obj_category = new CategoryModel();
-        $category = $obj_category->find($id);
+        $ob_category = new CategoryModel();
+        $category = $ob_category->find($id);
         return $this->view('panel.category.edit', compact('category'));
     }
 
     public function update($id)
     {
+        // var_dump('hi');
         $category = new CategoryModel();
         $category->update($id, $_POST);
         return $this->redirect('category');

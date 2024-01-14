@@ -30,6 +30,7 @@ class Article extends Controller
 
     public function show($id)
     {
+        
     }
 
     public function edit($id)
@@ -44,7 +45,7 @@ class Article extends Controller
     public function update($id)
     {
         $article = new ArticleModel();
-        $article->update($id , $_POST);
+        $article->update($id, $_POST);
         return $this->redirect('article');
     }
 
