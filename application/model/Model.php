@@ -30,12 +30,21 @@ class Model
     protected function query($query, $values = null)
     {
         try {
-            if ($values = null) {
+            // if ($values == null) {
+            //     return $this->connection->query($query);
+            // } else {
+            //     $stmt = $this->connection->prepare($query);
+            //     $stmt->execute($values);
+            //     return $stmt;
+            // }
+            if ($values == null) {
                 return $this->connection->query($query);
-            } else {
+            }
+            else {
                 $stmt = $this->connection->prepare($query);
                 $stmt->execute($values);
-                return $stmt;
+                $result = $stmt;
+                return $result;
             }
         } catch (PDOException $e) {
             echo 'there is some error in query' . $e->getMessage();
@@ -58,7 +67,8 @@ class Model
         }
     }
 
-    protected function closeConnection(){
+    protected function closeConnection()
+    {
         $this->connection = null;
     }
 }

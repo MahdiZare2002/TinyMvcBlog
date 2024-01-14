@@ -11,6 +11,6 @@ unset($tmp);
 
 //DataBase Configs
 $dbHost = 'localhost';
-$dbName = 'mvcblog';
+$dbName = 'mvc_blog';
 $dbUsername = 'root';
 $dbPassword = '';
